@@ -1,0 +1,17 @@
+<%= form_for :user_region, url: user_regions_path do |f| %>
+
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.collection_select :user_id, User.order(:first_name),:id,:first_name%>
+  </p>
+
+
+<p>
+    <%= f.label :region_id %><br>
+    <%= f.collection_select :region_id, Region.order(:region_name),:id,:region_id%>
+  </p>
+
+ <p>
+    <%= f.submit %>
+  </p>
+<% end %>
