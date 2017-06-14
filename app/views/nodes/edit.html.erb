@@ -1,0 +1,18 @@
+<%= form_for :node, url: nodes_path do |f| %>
+
+
+
+  <p>
+    <%= f.label :node_name %><br>
+    <%= f.text_field :node_name %>
+  </p>
+
+  <p>
+    <%= f.label :place_id %><br>
+    <%= f.collection_select :place_id, Place.order(:place_name),:id,:place_name%>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

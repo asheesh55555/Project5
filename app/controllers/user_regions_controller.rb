@@ -1,6 +1,30 @@
 class UserRegionsController < ApplicationController
 
 
+  def index
+    @user_regions = UserRegion.all
+  end
+ def edit
+  @user_region = UserRegion.find(params[:id])
+end
+def update
+  @user_region = UserRegion.find(params[:id])
+ 
+  if @user_region.update(user_region_params)
+    redirect_to @user_region
+  else
+    render 'edit'
+  end
+end
+def destroy
+  @user_region = UserRegion.find(params[:id])
+  @user_region.destroy
+ 
+  redirect_to user_regions_path
+end
+
+
+
 	def new
 		
 	end

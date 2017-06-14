@@ -1,0 +1,23 @@
+<%= link_to 'New user_region', new_user_region_path %>
+<h1>Listing user_regions</h1>
+ 
+<table>
+  <tr>
+    <th>user_region_name</th>
+    
+  </tr>
+ 
+  <% @user_regions.each do |user_region| %>
+    <tr>
+      <td><%= user_region.user_id %></td>
+      <td><%= user_region.region_id %></td>
+      
+  
+      <td><%= link_to 'Show', user_region_path(user_region) %></td>
+       <td><%= link_to 'Edit', edit_user_region_path(user_region) %></td>
+       <td><%= link_to 'Destroy', user_region_path(user_region),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

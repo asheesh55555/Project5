@@ -1,5 +1,39 @@
 class CompaniesController < ApplicationController
-	def new
+	
+def index
+    @companies = Company.all
+  end
+ def edit
+  @company = Company.find(params[:id])
+end
+def update
+  @company = Company.find(params[:id])
+ 
+  if @company.update(company_params)
+    redirect_to @company
+  else
+    render 'edit'
+  end
+end
+def destroy
+  @company = Company.find(params[:id])
+  @company.destroy
+ 
+  redirect_to companies_path
+end
+
+
+
+
+
+
+
+
+
+
+
+
+  def new
 		
 	end
 
@@ -22,6 +56,6 @@ end
   end
 private
   def company_params
-  	params.require(:company).permit(:name, :country_id, :state_id, :city_id, :postcode, :start_date, :active)
+  	params.require(:company).permit(:name, :country_id, :state_id, :company_id, :postcode, :start_date, :active)
   end
 end

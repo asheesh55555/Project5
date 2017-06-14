@@ -1,0 +1,23 @@
+<%= form_for :image, url: images_path do |f| %>
+
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.collection_select :user_id, User.order(:first_name),:id,:first_name%>
+  </p>
+
+
+  <p>
+    <%= f.label :real_name %><br>
+    <%= f.text_field :real_name %>
+  </p>
+
+  <p>
+    <%= f.label :image_name %><br>
+    <%= f.text_field :image_name %>
+  </p>
+
+
+ <p>
+    <%= f.submit %>
+  </p>
+<% end %>
