@@ -12,12 +12,12 @@
 
   <p>
     <%= f.label :state_id %><br>
-    <%= f.collection_select :state_id, State.order(:state_name),:id,:state_id%>
+    <%= f.collection_select :state_id, State.order(:state_name),:id,:state_name%>
   </p>
 
   <p>
     <%= f.label :city_id %><br>
-   <%= f.collection_select :city_id, City.order(:city_name),:id,:city_id%>
+   <%= f.collection_select :city_id, City.order(:city_name),:id,:city_name%>
   </p>
 
  <p>
