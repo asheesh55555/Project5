@@ -7,7 +7,7 @@
  
  <p>
     <%= f.label :country_id %><br>
-    <%#= f.collection_select :country_id, Country.order(:country_id),:id,:country_id%>
+    <%= f.collection_select :country_id, Country.order(:country_name),:id,:country_name%>
   </p>
 
   <p>
