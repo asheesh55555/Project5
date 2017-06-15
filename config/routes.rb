@@ -14,4 +14,6 @@ Rails.application.routes.draw do
          resources :images
           resources :places
            resources :nodes
+           resources :pages
+           resources :sites
 end
