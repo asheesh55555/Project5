@@ -25,7 +25,7 @@ end
 
 
 	def new
-		
+		@user_role=User.new
 	end
 
  

@@ -1,15 +1,46 @@
 <p>
   <strong>site:</strong>
-  <%= @site.site %>
+ 	<button class="" id="btpl">
+       <%= @site.site %>
+    </button>
+
 </p>
  
 <p>
-  <strong>url:</strong>
-  <%= @site.url %>
+  <strong >url:</strong>
+  <a class="" id="btpl">
+  	<%= @site.url%>
+  </a>
 </p>
  
 <p>
   <strong>name:</strong>
-  <%= @site.name %>
+  <a onclick="myFunction()">
+  	<%= @site.name %>
+  </a>
 </p>
- 
+
+
+<button onclick="myFunction()">Try it</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<script>
+function myFunction() {
+    alert("Hello! I am an alert box!");
+};
+
+
+$('.rakesh').click(function() {
+	alert('csdccds')
+});
+
+$('#btpl').click(function() {
+	alert('csdccds')
+});
+
+
+</script>
+
+</body>
+</html>

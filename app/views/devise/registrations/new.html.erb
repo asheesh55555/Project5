@@ -9,6 +9,57 @@
   </div>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+   <%= f.collection_select :company_id, Company.order(:name),:id,:name%>
+  </div>
+
+  <div class="field">
+    <%= f.label :role_id %><br />
+   <%= f.collection_select :role_id, UserRole.order(:role_name),:id,:role_name%>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%=  f.date_select :start_date %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%=  f.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monthly_charge %><br />
+    <%= f.number_field :monthly_charge %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%=  f.text_field :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_id %><br />
+    <%= f.collection_select :image_id, Image.order(:id),:id,:id%>
+  </div>
+
+ <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>

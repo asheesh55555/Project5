@@ -1,0 +1,51 @@
+<%= form_for @company do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+ <p>
+    <%= f.label :country_id %><br>
+    <%= f.collection_select :country_id, Country.order(:country_name),:id,:country_name%>
+  </p>
+
+  <p>
+    <%= f.label :state_id %><br>
+    <%= f.collection_select :state_id, State.order(:state_name),:id,:state_name%>
+  </p>
+
+  <p>
+    <%= f.label :city_id %><br>
+   <%= f.collection_select :city_id, City.order(:city_name),:id,:city_name%>
+  </p>
+
+ <p>
+    <%= f.label :postcode %><br>
+    <%= f.text_field :postcode %>
+  </p>
+ 
+ <p>
+    <%= f.label :start_date %><br>
+    <%= f.text_field :start_date %>
+  </p>
+  
+  <p>
+    <%= f.label :active %><br>
+    <%= f.text_field :active %>
+  </p>
+  
+  <p>
+    <%= f.label :company_image %><br>
+    <%= f.file_field :company_image %>
+  </p>
+  <p>
+    <%= f.label :profile_image %><br>
+    <%= f.file_field :profile_image %>
+  </p>
+  
+  
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

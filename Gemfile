@@ -62,3 +62,4 @@ group :production do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 gem 'carrierwave', '~> 1.0'
+gem 'activeadmin', github: 'activeadmin'
